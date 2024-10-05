@@ -1,0 +1,319 @@
+@import url(common.css);
+
+/*カテゴリータグ背景色  */
+.category-uncategorized {
+    background-color: rgb(214, 214, 0);
+}
+
+.category-information {
+    background-color: #08da21;
+}
+
+.category-blog {
+    background-color: aqua;
+}
+
+.category-recruitment {
+    background-color: red;
+}
+
+/* ------------------------------------------------ */
+/* post */
+
+.post-background {
+    width: 100%;
+    background-image: url("./images/papyrus-texture.jpg");
+    background-repeat: repeat;
+    border-top-right-radius: 1000px 200px;
+    border-top-left-radius: 1000px 200px;
+    border-bottom-right-radius: 1000px 200px;
+    border-bottom-left-radius: 1000px 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.post__wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 150px 0;
+}
+
+.post__time {
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.post__title {
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 1;
+    margin: 80px auto 0;
+}
+
+.post__title::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color: rgba(187, 0, 0, 0.277);
+    background: linear-gradient(to right top, rgba(187, 0, 0, 0.5), rgba(187, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+}
+
+.post__category {
+    width: fit-content;
+    min-width: 80px;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.post__content {
+    font-size: 1.5rem;
+    width: 100%;
+    margin: 50px auto 0;
+}
+
+@media screen and (max-width:1024px) {
+
+    .post__wrapper {
+        padding: 120px 15px;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .post__title {
+        font-size: 1.5rem;
+    }
+
+    .post__content {
+        font-size: 1rem;
+    }
+}
+
+/* --------------------------------------------------------- */
+/*announcements */
+
+.announcements-background {
+    width: 100%;
+    background-image: url("./images/papyrus-texture.jpg");
+    background-repeat: repeat;
+    border-top-right-radius: 1000px 200px;
+    border-top-left-radius: 1000px 200px;
+    border-bottom-right-radius: 1000px 200px;
+    border-bottom-left-radius: 1000px 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.announcements__title {
+    width: fit-content;
+    height: fit-content;
+    font-size: 2.5rem;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    margin: 80px auto 0;
+}
+
+.announcements__title::after {
+    content: "";
+    width: 100%;
+    height: 50%;
+    background-color: rgba(187, 0, 0, 0.277);
+    background: linear-gradient(to right top, rgba(184, 187, 0, 0.5), rgba(187, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    display: block;
+}
+
+.announcements__wrapper {
+    min-height: 100vh;
+    padding: 150px 0;
+}
+
+.announcements__inner {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.announcements__content {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+
+.announcements__content a {
+    display: flex;
+    justify-content: space-between;
+    gap: 5%;
+    padding: 30px;
+    transition: all .3s ease;
+}
+
+@media (hover: hover) {
+    .announcements__content a:hover {
+        opacity: .7;
+        box-shadow: 0 0 5px gray;
+    }
+}
+
+.announcements__content--left {
+    width: 30%;
+    height: 300px;
+}
+
+.announcements__content--left img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.announcements__content--right {
+    width: 65%;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.announcements__content--time {
+    display: block;
+}
+
+.announcements__content--category {
+    width: fit-content;
+    min-width: 80px;
+    color: white;
+    line-height: 1.2;
+    text-align: center;
+    border-radius: 15px;
+    padding: 0 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.announcements__content--title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.announcements__content--sentence {
+    margin-top: 15px;
+}
+
+.pagination-wrapper {
+    margin-top: 50px;
+}
+
+.pagination-wrapper .page-numbers {
+    font-size: 1.5rem;
+    padding: 0 5px;
+    margin: 0 5px;
+}
+
+.pagination-wrapper .page-numbers.current {
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+@media screen and (max-width:1024px) {
+
+    .announcements__wrapper {
+        padding: 150px 15px;
+    }
+}
+
+@media screen and (max-width:576px) {
+
+    .announcements__wrapper {
+        padding: 80px 15px;
+    }
+
+    .announcements__content a {
+        flex-direction: column-reverse;
+    }
+
+    .announcements__content--left {
+        width: 100%;
+    }
+
+    .announcements__content--right {
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .pagination-wrapper .page-numbers {
+        font-size: 1rem;
+        margin: 0 3px;
+    }
+}
+
+/* --------------------------------------------------*/
+/* 404 */
+.not-found__wrapper {
+    width: 100%;
+    height: calc(96.1vh - 220px);
+    margin: 0 auto;
+    position: relative;
+}
+
+.not-found__content {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.not-found__content h2 {
+    font-size: 82px;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.not-found__content p {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.not-found__content a {
+    width: fit-content;
+    height: fit-content;
+    font-size: 42px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+    display: block;
+    border: 3px solid black;
+    padding: 5px 35px;
+    box-shadow: 0 0 5px black;
+}
+
+@media (hover: hover) {
+    .not-found__content a:hover {
+        opacity: .9;
+        box-shadow: 0 0 5px gray;
+    }
+}
