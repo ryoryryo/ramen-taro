@@ -136,4 +136,4 @@ get_header(); ?>
         }
     }
 </script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDA2dI7c4RYYAAXnkH5g8YrllyR23oUE4E&callback=initMap"></script>
+<script async defer src="[MY_GOOGLE_API_KEY]&callback=initMap"></script>
