@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     mb_internal_encoding("UTF-8");
 
     //店側送信------------------------------------------------------------------
-    $from1 = 'info@ryoryoryo.shop';
+    $from1 = '[MY_SERVER_EMAIL_DOMAIN]';
 
     $headers1 = '';
     $headers1 .= "Content-Type: text/plain \r\n";
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers1 .= "X-Sender: {$form_data['email']} \r\n";
     $headers1 .= "X-Priority: 3 \r\n";
 
-    $to1 = 'karaagelunch7@gmail.com';
+    $to1 = '[MY_GOOGLE_EMAIL_ADDRESS]';
     $subject1 = 'お問い合わせが届きました@らーめんたろう';
     $body1 = <<<EOT
 名前： {$form_data['user-name']}
@@ -50,13 +50,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 株式会社 Driven by ramen
 EOT;
     //お問い合わせ者側送信---------------------------------------------------------------
-    $from2 = 'info@ryoryoryo.shop';
+    $from2 = '[MY_SERVER_EMAIL_DOMAIN]';
 
     $headers2 = '';
     $headers2 .= "Content-Type: text/plain \r\n";
     $headers2 .= "Return-Path: {$form_data['email']} \r\n";
     $headers2 .= "From: " . mb_encode_mimeheader($form_data['user-name']) . " <{$from2}> \r\n";
-    $headers2 .= "Reply-To: karaagelunch7@gmail.com \r\n";
+    $headers2 .= "Reply-To: [MY_GOOGLE_EMAIL_ADDRESS] \r\n";
     $headers2 .= "Organization: " . mb_encode_mimeheader($form_data['user-name']) . " \r\n";
     $headers2 .= "Precedence: bulk \r\n";
     $headers2 .= "X-Sender: {$form_data['email']} \r\n";
